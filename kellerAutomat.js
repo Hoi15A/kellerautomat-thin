@@ -1,6 +1,6 @@
 /**
- * Checks wheter a char is an operator or a digit
- * and pushes the result to the stack
+ * Evaulates a UPN string and prints the current stack in each step.
+ * Includes actual calculation.
  * @param Array input Array of characters
  */
 function kellerautomat(input) {
@@ -22,7 +22,7 @@ function kellerautomat(input) {
     });
 
     let returnVal = stack.pop();
-    return isNaN(returnVal) ? 'Verwerfend' : returnVal;
+    return isNaN(returnVal) || stack.length !== 0 ? 'Verwerfend' : returnVal;
 }
 
 /**
